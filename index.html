@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <article class="character_creation">
+        <section class="creation_header">
+            <h1>Welcome to the Nexus</h1>
+            <h2>Please discover yourself below</h2>
+        </section>
+        <section class="creation_main">
+            <input type="text" title="Your Name" id="char_name" placeholder="Bartholomew">
+            <div id="stat_container"></div>
+            <button id="stat_roll">Roll Stats</button>
+            <select id="class_select">
+                <option>Godsend</option>
+                <option>Logician</option>
+                <option>Empath</option>
+                <option>Strongman</option>
+                <option>Deprived</option>
+            </select>
+            <select id="personality_select">
+                <option>Clever</option>
+                <option>Considerate</option>
+                <option>Confident</option>
+                <option>Carefree</option>
+                <option>Callous</option>
+            </select>
+        </section>
+        <section class="creation_finalized">
+            <div class="character_container"></div>
+        </section>
+    </article>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
