@@ -12,6 +12,19 @@
         "ignorance": "2"
       },
       "id": 1
+    },
+    {
+      "name": "Jorgen Burr",
+      "classSelected": "Strongman",
+      "personality": "Callous",
+      "stats": {
+        "faith": "7",
+        "smarts": "3",
+        "connection": "4",
+        "strength": "7",
+        "ignorance": "5"
+      },
+      "id": 2
     }
   ]
 }
