@@ -37,12 +37,12 @@ const capitalizeString = (string) => {
 
 // convert statBlock object into HTML
 
-const statObjectToHTML = (object) => {
+const statObjectToHTML = (object, tempStatsObject) => {
     let statString = ``;
+    tempStatsObject = object;
     for (const key in object) {
-            statString += `<p>${capitalizeString(key)}: ${object[key]}</p>`
+            statString += `<p>${capitalizeString(key)}: ${object[key]} </p>`
     }
-    console.log('statString', statString)
     return statString;
 }
 
@@ -51,7 +51,6 @@ const statObjectToHTML = (object) => {
 const statBlock = document.querySelector('#stat_container')
 const statHTMLtoDOM = (string) => {
     statBlock.innerHTML = string;
-    console.log('statHTML', statBlock)
 }
 
 export default {createGodsend, createLogician, createEmpath, createStrongman, createDeprived, statObjectToHTML, statHTMLtoDOM}

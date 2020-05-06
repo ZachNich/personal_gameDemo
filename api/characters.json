@@ -1,0 +1,17 @@
+{
+  "characters": [
+    {
+      "name": "Bartholomew",
+      "classSelected": "Empath",
+      "personality": "Considerate",
+      "stats": {
+        "faith": "3",
+        "smarts": "5",
+        "connection": "10",
+        "strength": "4",
+        "ignorance": "2"
+      },
+      "id": 1
+    }
+  ]
+}

@@ -13,7 +13,6 @@
         </section>
         <section class="creation_main">
             <input type="text" title="Your Name" id="char_name" placeholder="Bartholomew">
-            <div id="stat_container"></div>
             <select id="class_select">
                 <option>Godsend</option>
                 <option>Logician</option>
@@ -29,11 +28,13 @@
                 <option>Callous</option>
             </select>
             <button id="stat_roll">Roll Stats</button>
+            <div id="stat_container"></div>
         </section>
         <section class="creation_finalized">
+            <button id="character_save">This is who I am.</button>
             <div class="character_container"></div>
         </section>
     </article>
-    <script type="module" src="main.js"></script>
+    <script type="module" src="./scripts/stats.js"></script>
 </body>
 </html>
