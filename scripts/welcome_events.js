@@ -1,6 +1,7 @@
 import stats from './stats.js'
 import character from './characterSheet.js'
 import data from './data.js'
+import items from './items.js'
 
 const statBlock = document.querySelector('#stat_container')
 
@@ -19,7 +20,8 @@ const saveCharacter = document.querySelector('#character_save').addEventListener
         let personality = document.querySelector('#personality_select').value
         let charStats = character.statHTMLtoObject(document.querySelector('#stat_container').textContent)
         data.saveCharToDatabase(character.createCharacter(name, classSelected, personality, charStats));
-        window.alert('So this is who you are. Let\'s see how you do.')
+        window.alert('So this is who you are. Let\'s see how you do.');
+        window.location.assign('./items');
     }
 })
 

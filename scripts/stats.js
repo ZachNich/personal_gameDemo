@@ -1,4 +1,4 @@
-import events from './events.js'
+import events from './welcome_events.js'
 
 // create statBlock object
 

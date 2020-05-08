@@ -1,0 +1,94 @@
+{
+  "characters": [
+    {
+      "name": "Bartholomew",
+      "classSelected": "Empath",
+      "personality": "Considerate",
+      "stats": {
+        "faith": "3",
+        "smarts": "5",
+        "connection": "10",
+        "strength": "4",
+        "ignorance": "2"
+      },
+      "id": 1
+    },
+    {
+      "name": "Jorgen Burr",
+      "classSelected": "Strongman",
+      "personality": "Callous",
+      "stats": {
+        "faith": "7",
+        "smarts": "3",
+        "connection": "4",
+        "strength": "7",
+        "ignorance": "5"
+      },
+      "id": 2
+    },
+    {
+      "name": "Barty C.",
+      "classSelected": "Godsend",
+      "personality": "Confident",
+      "stats": {
+        "faith": "9",
+        "smarts": "6",
+        "connection": "5",
+        "strength": "4",
+        "ignorance": "10"
+      },
+      "id": 3
+    },
+    {
+      "name": "Bubba",
+      "classSelected": "Deprived",
+      "personality": "Callous",
+      "stats": {
+        "faith": "3",
+        "smarts": "4",
+        "connection": "2",
+        "strength": "4",
+        "ignorance": "5"
+      },
+      "id": 4
+    }
+  ],
+  "items": [
+    {
+      "name": "Holy book",
+      "description": "A white book well-worn at the edges. As you turn the pages, you don't recognize the language. Closing the book, you notice a faded four-pointed star on the cover.",
+      "value": 10,
+      "use": false,
+      "id": 1
+    },
+    {
+      "name": "Dead branch",
+      "description": "A cumbersome branch fallen from a dying oak. You decided to pick it up after seeing it on the ground. Did you pick it up to save it from lonely death, or did you pick it up to sell to someone dumber than you? You can't quite remember. In any case, it could be used as a makeshift weapon.",
+      "value": 20,
+      "slot": "weapon",
+      "stats": {
+        "attack": 1,
+        "defense": 0
+      },
+      "id": 2
+    },
+    {
+      "name": "Rusty key",
+      "description": "A suprisingly large key rusted all over. Red comes off on your fingers when you touch it, and it seems on its last leg, but maybe it could prove useful in the future.",
+      "value": 0,
+      "use": false,
+      "id": 3
+    },
+    {
+      "name": "Ragged hat",
+      "description": "A black tophat that's seen better days. You give it a good tuss up in hopes of restoring it's former shape.",
+      "value": 15,
+      "slot": "head",
+      "stats": {
+        "attack": 0,
+        "defense": 1
+      },
+      "id": 4
+    }
+  ]
+}
