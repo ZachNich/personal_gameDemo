@@ -1,0 +1,9 @@
+.hidden {
+    display: none;
+}
+
+.tooltip {
+    border: 1px solid rgb(80, 79, 79);
+    background-color: grey;
+    color: white;
+}
