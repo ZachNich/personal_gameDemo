@@ -20,6 +20,19 @@ const API = {
     getItemFromDatabase () {
         return fetch('http://localhost:3000/items')
             .then(response => response.json());
+    },
+    addItemToInventory (item) {
+        return fetch('http://localhost:3000/inventory', {
+            method: 'POST',
+            headers: {
+                'Content-type': 'application/json'
+            },
+            body: JSON.stringify(item)
+        })
+    },
+    getInventory() {
+        return fetch('http://localhost:3000/inventory')
+            .then(response => response.json());
     }
 }
 

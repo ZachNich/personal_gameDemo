@@ -5,7 +5,8 @@ const createItem = (name, description, value, use) => ({
     name: name,
     description: description,
     value: value,
-    use: use
+    use: use,
+    amount: 1
 })
 
 const createEquipment = (name, description, value, slot, stats) => ({
@@ -13,7 +14,8 @@ const createEquipment = (name, description, value, slot, stats) => ({
     description: description,
     value: value,
     slot: slot,
-    stats: stats
+    stats: stats,
+    amount: 1
 })
 
 const holy_book = createItem('Holy book', 'A white book well-worn at the edges. As you turn the pages, you don\'t recognize the language. Closing the book, you notice a faded four-pointed star on the cover.', 10, false)
@@ -29,4 +31,12 @@ const dead_branch = createEquipment('Dead branch', 'A cumbersome branch fallen f
 // data.saveItemToDatabase(rusty_key)
 // data.saveItemToDatabase(dead_branch)
 
-export default {holy_book, ragged_hat, rusty_key, dead_branch}
+const addInventoryToDOM = (object) => {
+    document.querySelector('.inventory_container').innerHTML = `
+    <p>${object.name}</p>
+    <p>Value: ${object.value}</p>
+    <p>Description: ${object.description}</p>
+    `
+}
+
+export default {holy_book, ragged_hat, rusty_key, dead_branch, addInventoryToDOM}

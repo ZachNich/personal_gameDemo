@@ -1,3 +1,7 @@
+body {
+    font-family: monospace;
+}
+
 .hidden {
     display: none;
 }
@@ -6,4 +10,18 @@
     border: 1px solid rgb(80, 79, 79);
     background-color: grey;
     color: white;
+    padding: 4px;
+    border-radius: 10px;
+    margin: 1em 1em 0 1em;
 }
+
+.item_available {
+    display: flex;
+    flex-flow: row wrap;
+    padding:.5em 0;
+}
+
+.item_available p {
+    flex: auto;
+}
+
