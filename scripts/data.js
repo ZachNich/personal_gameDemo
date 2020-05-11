@@ -21,6 +21,10 @@ const API = {
         return fetch('http://localhost:3000/items')
             .then(response => response.json());
     },
+    getOneItemFromDatabase (id) {
+        return fetch(`http://localhost:3000/items/${id}`)
+            .then(response => response.json());
+    },
     addItemToInventory (item) {
         return fetch('http://localhost:3000/inventory', {
             method: 'POST',
@@ -33,6 +37,11 @@ const API = {
     getInventory() {
         return fetch('http://localhost:3000/inventory')
             .then(response => response.json());
+    },
+    removeItemfromInventory (itemId) {
+        return fetch(`http://localhost:3000/inventory/${itemId}`, {
+            method: 'DELETE',
+        })
     }
 }
 
