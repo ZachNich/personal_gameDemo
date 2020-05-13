@@ -63,4 +63,8 @@ invContainer.addEventListener('click', event => {
         data.removeItemfromInventory(event.target.id.split('-')[1])
         .then(() => dom.removeInventoryFromDOM(event.target.id.split('-')[1]))
     }
+    if (event.target.id === 'next') {
+        window.alert('The breath of autumn is upon you. Step forward with the westerly wind.');
+        window.location.assign('./start');
+    }
 })

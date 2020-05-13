@@ -18,6 +18,7 @@ const addInventoryToDOM = (object) => {
     <p>Value: ${object.value}</p>
     <p>Description: ${object.description}</p>
     <button id="delete-${object.id}">Drop</button>
+    <button id="next">Take it and move on with no regret</button>
     `
     invContainer.appendChild(newItem);
 }
