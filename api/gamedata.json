@@ -51,19 +51,6 @@
         "ignorance": "5"
       },
       "id": 4
-    },
-    {
-      "name": "Zachy  Boi",
-      "classSelected": "Strongman",
-      "personality": "Confident",
-      "stats": {
-        "faith": "6",
-        "smarts": "1",
-        "connection": "4",
-        "strength": "6",
-        "ignorance": "4"
-      },
-      "id": 5
     }
   ],
   "items": [

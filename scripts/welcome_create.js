@@ -1,7 +1,24 @@
-import events from './welcome_events.js'
+// creates character object from input
+const createCharacter = (name, classSelected, personality, stats) => ({
+    name: name,
+    classSelected: classSelected,
+    personality: personality,
+    stats: stats
+})
+
+// takes the randomized stats that are displayed to the DOM from the "Embrace Chance" btn and saves them to an object in order to preserve the rolled stats
+const statHTMLtoObject = (string) => {
+    let valuesOnly = string.match(/\d+/g)
+    return {
+        faith: valuesOnly[0],
+        smarts: valuesOnly[1],
+        connection: valuesOnly[2],
+        strength: valuesOnly[3],
+        ignorance: valuesOnly[4]
+    }
+}
 
 // create statBlock object
-
 const createStatBlock = (faith, smarts, connection, strength, ignorance) => ({
     faith: faith,
     smarts: smarts,
@@ -11,13 +28,11 @@ const createStatBlock = (faith, smarts, connection, strength, ignorance) => ({
 })
 
 // return random numbers between min and max arguments (inclusive)
-
 const getRandomNum = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
 // feed createStatBlock with parameters appropriate to class
-
 const createGodsend = () => createStatBlock(getRandomNum(6, 10), getRandomNum(4, 7), getRandomNum(4, 7), getRandomNum(1, 5), getRandomNum(5, 10));
 
 const createLogician = () => createStatBlock(getRandomNum(1, 5), getRandomNum(6, 10), getRandomNum(4, 7), getRandomNum(1, 5), getRandomNum(4, 7));
@@ -28,29 +43,5 @@ const createStrongman = () => createStatBlock(getRandomNum(4, 7), getRandomNum(1
 
 const createDeprived = () => createStatBlock(getRandomNum(2, 5), getRandomNum(2, 5), getRandomNum(2, 5), getRandomNum(2, 5), getRandomNum(2, 5));
 
-// capitalize first letter in string
 
-const capitalizeString = (string) => {
-    const newString = string.charAt(0).toUpperCase() + string.slice(1);
-    return newString;
-}
-
-// convert statBlock object into HTML
-
-const statObjectToHTML = (object, tempStatsObject) => {
-    let statString = ``;
-    tempStatsObject = object;
-    for (const key in object) {
-            statString += `<p>${capitalizeString(key)}: ${object[key]} </p>`
-    }
-    return statString;
-}
-
-// insert statBlock HTML into DOM
-
-const statBlock = document.querySelector('#stat_container')
-const statHTMLtoDOM = (string) => {
-    statBlock.innerHTML = string;
-}
-
-export default {createGodsend, createLogician, createEmpath, createStrongman, createDeprived, statObjectToHTML, statHTMLtoDOM}
+export default { createCharacter, statHTMLtoObject, createGodsend, createLogician, createEmpath, createStrongman, createDeprived }

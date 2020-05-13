@@ -1,17 +1,15 @@
-import stats from './stats.js'
-import character from './characterSheet.js'
+import stats from './welcome_dom.js'
+import character from './welcome_create.js'
 import data from './data.js'
-import items from './items.js'
 
-const statBlock = document.querySelector('#stat_container')
-
-// generates random stats within thresholds determined by class selected when Roll Stats btn clicked
-const rollStats = document.querySelector('#stat_roll').addEventListener('click', event => {
+// generates random stats within thresholds determined by class selected when "Embrace Chance" btn clicked
+document.querySelector('#stat_roll').addEventListener('click', event => {
     let classSelected = document.querySelector('#class_select').value
-    stats.statHTMLtoDOM(stats.statObjectToHTML(stats[`create${classSelected}`]()))
+    stats.statHTMLtoDOM(stats.statObjectToHTML(character[`create${classSelected}`]()))
 })
 
-const saveCharacter = document.querySelector('#character_save').addEventListener('click', event => {
+// saves character to database when final btn clicked (after checking to be sure all parameters are set)
+document.querySelector('#character_save').addEventListener('click', event => {
     if (document.querySelector('#char_name').checkValidity() === false) {
         window.alert('Names must be neither too short nor too long.')
     } else {
@@ -24,5 +22,3 @@ const saveCharacter = document.querySelector('#character_save').addEventListener
         window.location.assign('./items');
     }
 })
-
-export default {rollStats, saveCharacter}
